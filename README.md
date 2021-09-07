@@ -1,3 +1,3 @@
 # NWFSC-hake
 
-This repository is predicting age of pacific hake from the near-infrared spectra of their otoliths. First, load OPUS files; next pre-process, plot and visualize; finally build a PLS model to predict age from pre-processed spectra. 
+This repository houses code to predict the age of pacific hake from the near-infrared spectra of their otoliths. First, to load OPUS files; next to pre-process, plot and visualize; finally to build a PLS model to predict age from pre-processed spectra. 
