@@ -53,17 +53,17 @@ metadat <- sapply(rdat,'[[', 1)
 filenames <- unlist(metadat[2,])
 dat <- cbind(filenames, dat_spc)
 
-scan_data <- read.csv("C:/Users/marri/OneDrive/Documents/AFSC A&G Contract/Hake/Hake_data/FTNIR_Hake_2019.csv", strip.white=TRUE) #load in ancillary data
+scan_data <- read.csv("C:/Users/marri/OneDrive/Documents/AFSC A&G Contract/Hake/Hake_data/hake_scandata_2019.csv", strip.white=TRUE) #load in ancillary data
 
 int_data <- left_join(dat, scan_data, by = "filenames")
 
 # ADD AGE DATA
-age_data <- read.csv("C:/Users/marri/OneDrive/Documents/AFSC A&G Contract/Hake/Hake_data/FT_NIR_NWFSC_ProductionAgeScanning_2019.csv", strip.white = TRUE) #load in age data
+age_data <- read.csv("C:/Users/marri/OneDrive/Documents/AFSC A&G Contract/Hake/Hake_data/hake_agedata_2019.csv", strip.white = TRUE) #load in age data
 
 all_data <- left_join(int_data, age_data, by = "sequence")
 
 # ADD HAUL METADATA
-haul_data <- read.csv("~/AFSC A&G Contract/Hake/Hake_data/Hake_haulmetadata_2019.csv")
+haul_data <- read.csv("~/AFSC A&G Contract/Hake/Hake_data/hake_haulmetadata_2019.csv")
 
 all_data <- left_join(all_data, haul_data, by = "Barcode")
 
