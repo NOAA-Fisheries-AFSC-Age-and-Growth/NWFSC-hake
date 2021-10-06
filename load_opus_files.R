@@ -67,6 +67,9 @@ haul_data <- read.csv("~/AFSC A&G Contract/Hake/Hake_data/hake_haulmetadata_2019
 
 all_data <- left_join(all_data, haul_data, by = "Barcode")
 
+#TO DO
+## Add a column with scan_num or some other name that is numeric value from file name so that data can be sorted for loaded into OPUS
+
 #output data
 write.csv(x = all_data, file = "C:/Users/marri/OneDrive/Documents/AFSC A&G Contract/Hake/Hake_data/hake_all_2019.csv")
 
